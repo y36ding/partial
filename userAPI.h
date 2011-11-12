@@ -1,0 +1,15 @@
+#ifndef _USERAPI_HEADER_
+#define _USERAPI_HEADER_
+
+#include "rtx.h"
+
+int send_message(int dest_pid, MsgEnv *msg_env);
+MsgEnv *receive_message();
+
+int send_console_chars(MsgEnv *msg_env);
+int get_console_chars(MsgEnv *msg_env);
+
+int release_message_env(MsgEnv* env);
+MsgEnv* request_msg_env();
+
+#endif
